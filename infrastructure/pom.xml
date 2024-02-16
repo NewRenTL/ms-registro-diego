@@ -2,12 +2,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.example</groupId>
+        <groupId>com.codigo</groupId>
         <artifactId>ms-registro-diego</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>org.example</groupId>
+    <groupId>com.codigo</groupId>
     <artifactId>infrastructure</artifactId>
     <name>Archetype - infrastructure</name>
+    <version>0.0.1-SNAPSHOT</version>
     <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>com.codigo</groupId>
+            <artifactId>domain</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
 </project>

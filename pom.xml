@@ -8,12 +8,12 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.codigo</groupId>
 	<artifactId>ms-registro-diego</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>ms-registro-diego</name>
-	<description>Demo project for Spring Boot</description>
+	<description>ms-registro-diego11</description>
     <modules>
         <module>application</module>
 		<module>infrastructure</module>
@@ -76,6 +76,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<image>
+						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
+					</image>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
