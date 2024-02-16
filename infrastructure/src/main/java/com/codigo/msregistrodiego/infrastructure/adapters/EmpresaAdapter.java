@@ -31,7 +31,9 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class EmpresaAdapter implements EmpresaServiceOut {
     private final EmpresaRepository empresaRepository;
-    private TipoDocumentoRepository tipoDocumentoRepository;
+
+    private final TipoDocumentoRepository tipoDocumentoRepository;
+
     private final EmpresaMapper empresaMapper;
 
     private final ClientSunat clienteSunat;
