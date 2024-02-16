@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
+
 
 @Entity
 @Table(name = "empresa")
@@ -14,48 +16,37 @@ public class EmpresaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_empresa")
+    public Long idEmpresa;
+
+    @Column(name = "num_docu")
     public String numeroDocumento;
 
+    @Column(name = "nom_comercial")
+    public String nombreComercial;
 
-
+    @Column(name = "razon_social")
     public String razonSocial;
 
-    public String estado;
+    @Column(name = "estado", nullable = false)
+    private Integer estado;
 
-    public String condicion;
+    @Column(name = "usua_crea", length = 45)
+    private String usuaCrea;
 
-    public String direccion;
+    @Column(name = "date_create")
+    private Timestamp dateCreate;
 
-    public String ubigeo;
+    @Column(name = "usua_modif", length = 45)
+    private String usuaModif;
 
-    public String viaTipo;
+    @Column(name = "date_modif")
+    private Timestamp dateModif;
 
-    public String viaNombre;
+    @Column(name = "usua_delet", length = 45)
+    private String usuaDelet;
 
-    public String zonaCodigo;
-
-    public String zonaTipo;
-
-    public String numero;
-
-    public String interior;
-
-    public String lote;
-
-    public String dpto;
-
-    public String manzana;
-
-    public String kilometro;
-
-    public String distrito;
-
-    public String provincia;
-
-    public String departamento;
-
-    @JsonProperty("EsAgenteRetencion")
-    public boolean esAgenteRetencion;
+    @Column(name = "date_delet")
+    private Timestamp dateDelet;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "tipo_documento_id",nullable = false)

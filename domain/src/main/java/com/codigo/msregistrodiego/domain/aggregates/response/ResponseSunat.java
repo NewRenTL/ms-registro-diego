@@ -30,6 +30,8 @@ public class ResponseSunat {
     public String distrito;
     public String provincia;
     public String departamento;
+
+    @Getter
     @JsonProperty("EsAgenteRetencion")
     public boolean esAgenteRetencion;
 }
